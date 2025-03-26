@@ -25,7 +25,7 @@ if (projet.productionProjet) {
         .replace(/^"|"$/g, '') // Supprime les guillemets extérieurs
         .replace(/"/g, '') // Supprime les guillemets internes
         .split(',') // Divise la chaîne par les virgules
-        .map(item => item.trim()); // Nettoie les espaces
+        .map((item: string) => item.trim()); // Nettoie les espaces
 }
 // console.log(projet.productionProjet);
 
@@ -45,13 +45,13 @@ if (projet.productionProjet) {
                         <div className='text-nowrap'>
                     <h2 className='text-xl font-titre'>Productions</h2>
                     <ul className="ml-8 mt-5 list-disc">
-                        {productions.map((production, index) => (
+                        {productions.map((production: string, index: number) => (
                             <li className='mt-3' key={index}>{production}</li> // Ajout de la liste à puces
                         ))}
                     </ul>
                     <h2 className='mt-10 text-xl font-titre'>Outils utilisés</h2>
                     <ul className="ml-8 mt-5 list-disc">
-                    {outils.map((outil, index) => (
+                    {outils.map((outil: string, index: number) => (
                         <li className='mt-3' key={index}>{outil.trim()}</li> // Ajout de la liste à puces
                     ))}
                     </ul>
