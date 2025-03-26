@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ["Open Sans", "Arial", "sans-serif"],
+        titre: ["KaiTi", "Arial", "sans-serif"],
+      },
     },
   },
   plugins: [],
